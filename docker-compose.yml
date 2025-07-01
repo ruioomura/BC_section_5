@@ -1,0 +1,5 @@
+version: "3.9"
+services:
+  web:
+    image: node:18
+    command: node -e "console.log('Hello from Docker')"
