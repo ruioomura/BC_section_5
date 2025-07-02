@@ -16,7 +16,7 @@ services:
       - "4000:4000"
     volumes:
       - ./api-server:/app
-    command: npm install
+    command: npm run dev
     depends_on:
       - mysql
 
