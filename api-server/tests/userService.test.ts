@@ -36,10 +36,10 @@ describe('updateUser', () => {
 
         const result = await updateUser(input);
         expect(result).toEqual(input);
-    });
+    })
 
     it('存在しないIDを渡すと例外を投げる', async () => {
-        const inpput: User = {
+        const input: User = {
             id: 'a'.repeat(50),
             name: 'Test',
             age: 25,
@@ -67,7 +67,7 @@ describe('updateUser', () => {
       age: -1,
     };
 
-    await expect(updateUser(input)).rejects.toThrow('Invalid age.');
+    await expect(updateUser(input)).rejects.toThrow('invalid age.');
   });
 
   it('idが50文字でないとエラーになる', async () => {
