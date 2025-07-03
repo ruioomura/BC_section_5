@@ -19,8 +19,6 @@ export default function UserReg() {
       <p className="text-lg underline text-blue-600 hover:text-blue-800">
         <Link href="/">Home に戻る</Link>
       </p>
-
-
     </main>
   );
 }

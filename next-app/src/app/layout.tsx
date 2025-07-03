@@ -1,12 +1,12 @@
-import "../styles/globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import '../styles/globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-const inter = Inter ({ subsets: ["latin"]});
+const inter = Inter({ subsets: ['latin'] });
 
-export const  metadata: Metadata = {
-  title: "My Next.js App",
-  description: "Built with Tailwind CSS",
+export const metadata: Metadata = {
+  title: 'My Next.js App',
+  description: 'Built with Tailwind CSS',
 };
 
 export default function RootLayout({

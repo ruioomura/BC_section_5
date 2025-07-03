@@ -1,9 +1,8 @@
 // @type {import('tailwindcss').Config}
 
-
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",        // App Router 用
+    './src/**/*.{js,ts,jsx,tsx}', // App Router 用
   ],
   theme: {
     extend: {},

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-
 export default function DepositReg() {
   // const router = useRouter();
   const [date, setDate] = useState('');
@@ -14,7 +13,7 @@ export default function DepositReg() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const newData = { 
+    const newData = {
       date,
       amount: parseFloat(amount),
       user,
@@ -26,33 +25,44 @@ export default function DepositReg() {
       body: JSON.stringify(newData),
     });
 
-    router.push('/detail')
+    router.push('/detail');
   };
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-6">
       <form onSubmit={handleSubmit}>
-      <h1 className="text-4xl font-bold">入出金登録</h1>
-      <div>
-        <label>日付:</label>
-        <input value={date} onChange={e => setDate(e.target.value)} required />
-      </div>
+        <h1 className="text-4xl font-bold">入出金登録</h1>
         <div>
-        <label>金額:</label>
-        <input value={amount} onChange={e => setAmount(e.target.value)} required />
-      </div>
+          <label>日付:</label>
+          <input
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
+        </div>
         <div>
-        <label>担当:</label>
-        <input value={user} onChange={e => setUser(e.target.value)} required />
-      </div>      
-      <button type="submit">送信</button>
-    </form>
+          <label>金額:</label>
+          <input
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>担当:</label>
+          <input
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">送信</button>
+      </form>
 
       {/* ――― ① Link コンポーネントでページ遷移 ――― */}
       <p className="text-lg underline text-blue-600 hover:text-blue-800">
         <Link href="/">Home に戻る</Link>
       </p>
-
     </main>
   );
 }
