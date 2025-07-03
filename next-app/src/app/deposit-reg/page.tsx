@@ -34,27 +34,15 @@ export default function DepositReg() {
         <h1 className="text-4xl font-bold">入出金登録</h1>
         <div>
           <label>日付:</label>
-          <input
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
+          <input value={date} onChange={(e) => setDate(e.target.value)} required />
         </div>
         <div>
           <label>金額:</label>
-          <input
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-            required
-          />
+          <input value={amount} onChange={(e) => setAmount(e.target.value)} required />
         </div>
         <div>
           <label>担当:</label>
-          <input
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-            required
-          />
+          <input value={user} onChange={(e) => setUser(e.target.value)} required />
         </div>
         <button type="submit">送信</button>
       </form>
