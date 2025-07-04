@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 
 // TODO:ここでdbUrl定義する意味調べる
 // const dbUrl = process.env.DATABASE_URL;
-console.log("接続先DB：", process.env.DATABASE_URL);
+console.log('接続先DB：', process.env.DATABASE_URL);
 
 // TODO:機能ごとにまとめる
 
@@ -22,7 +22,7 @@ router.patch('/', async (req, res) => {
     res.json(updated);
   } catch (error: unknown) {
     if (error instanceof Error) {
-        console.error(error.message);
+      console.error(error.message);
     }
     // res.status(400).json({ error: error.message });
   }
